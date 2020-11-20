@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PQBgfx\PQBgfx\PQBgfx.csproj" />
+    <ProjectReference Include="..\..\PQWindow\PQWindow\PQWindow.csproj" />
+    <ProjectReference Include="..\PQBgfxCommon\PQBgfxCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="shaders\dx11\fs_cubes.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="shaders\dx11\vs_cubes.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
